@@ -1,0 +1,44 @@
+@media(max-width :767px){
+.header-detail1{padding: 1px 8px 0 18px;}
+#h-d1-s-s{width: 100%;} .h-d1-s-id1{display: none;}
+.h-d1-s-id11{border: 1px solid #787878; border-radius: 99px; margin: 7px 8px 5px ; padding: 6px 11px; }
+.headmenu1{font-size: 15px;padding-right: 4px; line-height: 20px;}
+.h-m-l1{padding: 13px 9px 11px;}
+.h-m-l{padding: 13px 9px 11px;}
+#toca{font-size: 24px; margin-right: 0;}
+.sphidden{display: none;}
+.s1-menu-ul{gap:0; padding: 11px 14px;}
+.s1-menu-a{padding: 7px 10px 6px; font-size: 13px; line-height: 17px;}
+
+
+
+/* 3번째 섹션  */
+.s3-box{margin-top: 16px; padding-left: 16px; padding-right: 16px;}
+.s3-bm-ul-li{margin: 0 5px;}
+.s3-bm-ul-li-a{width: 56px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
