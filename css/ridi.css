@@ -44,7 +44,7 @@ header{width: 100%;height: 115px;}
 .h-m-l2{display: flex; align-items: center;margin-left: 20px; }
 
 
-/* 바디 첫번째 목차 */
+/* 바디 첫번째 섹션 목차 파트 */
 .s1-menu-d{max-width: 1170px; margin: 0 auto; }
 .s1-menu-d-f-l{display: flex;justify-content: space-between;align-items: center;}
 .s1-menu-d-f-l-box{overflow: auto;}
@@ -54,12 +54,37 @@ header{width: 100%;height: 115px;}
 
 
 
-/* 바디 2번째 섹선 */
-.s3-b{max-width: 1170px; padding:0 30px; margin-top: 30px; background-color: aqua; margin: 0 auto;}
-.s3-bm{position: relative; display: flex; flex-wrap: nowrap;overflow-x: auto; overflow-y: hidden;scrollbar-width: none;}
+/* 바디 세번째 섹선 */
+.s3-box{max-width: 1170px; padding:0 30px; margin-top: 30px; margin: 0 auto;}
+.s3-bm{position: relative; display: flex; flex-wrap: nowrap;justify-content: center;overflow-x: auto; overflow-y: hidden;scrollbar-width: none;}
 .s3-bm-ul{display: flex;flex-direction: row;justify-content: center;}
 .s3-bm-ul-li{display: inline-block;flex: none; margin: 0 10px;}
 .s3-bm-ul-li-a{display: flex;flex-direction: column; align-items: center;width: 70px ;}
 .s3-bm-ul-li-a-div{position: relative;width: 100%;height:0; padding-bottom: 100%; overflow: hidden;}
 .s3-bm-ul-li-a-div-img{width: 100%;height: 100%; position: absolute;top: 50%;left: 50%; transform: translate(-50%,-50%);}
-.s3-bm-ul-li-a-span{font-size: 13px;line-height: 16px;text-align: center;margin: 8px;font-weight: 500;}
+.s3-bm-ul-li-a-span{font-size: 13px;line-height: 16px;text-align: center;margin-top: 8px;font-weight: 500;}
+
+
+/* 바디 네번쩨 섹션 */
+.s4-box{max-width: 1170px; padding:0 30px; margin: 0 auto; margin-top: 40px; margin-bottom: 30px;}
+.s4-b-d1-title1{height: 48px;padding-top: 6px;padding-bottom: 16px;}
+.s4-b-d1-title2{width: 100%;height: 100%;display: flex;justify-content: space-between;align-items: center;}
+.s4-b-d2{position: relative;}
+.s4-b-d2-d1{display: flex;width: 100%;overflow: hidden;}
+/* .s4-b-d2-d1-d1{background-color: aliceblue;} */
+.s4-b-d2-ul{display: flex; flex-direction: row;}
+.s4-b-d2-d1-ol li:not(:nth-of-type(3n)){margin-bottom: 6px;}
+.s4-b-d2-d1-ol-li{width: 370px;height: 116px;}
+.s4-b-d2-d1-ol-li-d1{position: relative;display: flex;height: 100%;}
+.s4-b-d2-d1-ol-li-d1-d1{display: flex;flex-direction: column;justify-content: center;width: 80px; background-color: #c4c4c4; border-radius: 5px;}
+.s4-b-d2-d1-ol-li-d1-d2{display: flex;justify-content: center; align-items: center; width: 80px; height: 100%;}
+.s4-b-d2-d1-ol-li-d1-d3{display: flex;flex-direction: column; justify-content: center; align-items:start; width: 184px; height: 100%; margin-right: 26px;}
+.s4-b-d2-d1-ol-li-d1-d2-number{font-weight: 500;font-size: 18px;line-height: 21px;color: rgb(20,20,20);}
+
+/* 자바써야할곳 */
+.sbd-title{font-size: 16px;line-height: 19px;}
+.sbd-member{color: rgb(120, 120, 120); font-size: 13px;line-height: 16px;}
+.sbd-member-star{color: rgb(120, 120, 120); font-size: 10px;line-height: 1px; margin: 0px 5px; margin-top: 10px;}
+.s4-b-d2-d1-ol-li-d1-d3-form-member{margin-top: 6px;display: flex;}
+/* .s4-b-d2-d1-ol-li-d1-d3-form-member p{color: rgb(120, 120, 120); display: block;flex: 0 1 auto; overflow: hidden; font-size: 14px; line-height: 17px;} */
+.s4-b-d2-d1-ol-li-d1-d3-form-star{display: flex;flex-direction: column;margin-top: 7px;}
