@@ -20,9 +20,9 @@ header{width: 100%;}
 
 .header-magin{max-width: 1170px;margin: 0 auto;}
 
-.header-detail1{display: flex;justify-content:space-between;align-items:center;padding: 16px 18px 8px 30px;box-sizing: border-box;}
+.header-detail1{display: flex;justify-content:space-between;align-items:center;padding: 16px 18px 8px 30px;box-sizing: border-box; flex-wrap: wrap;}
 
-#h-d1-sid{width: 420px; display: flex; align-items:center; justify-content:right }
+#h-d1-sid{ display: flex;flex-direction: row-reverse; align-items:center; justify-content:right ;flex-wrap: wrap;}
 #logo1{width: 60px; height: 24px;}
 #logo2{width: 60px; height: 22px;}
 #h-d1-s{width: 260px;margin-right: 8px;display: flex;align-items: flex-start;}
