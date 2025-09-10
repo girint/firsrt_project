@@ -19,6 +19,7 @@
 
 /* 3번째 섹션  */
 .s3-box{margin-top: 16px; padding-left: 16px; padding-right: 16px;}
+.s3-bm{justify-content: left;}
 .s3-bm-ul-li{margin: 0 5px;}
 .s3-bm-ul-li-a{width: 56px;}
 
