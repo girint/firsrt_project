@@ -12,7 +12,7 @@
 .h-m-l{padding: 13px 9px 11px;}
 #toca{font-size: 24px; margin-right: 0;}
 .sphidden{display: none;}
-.s1-menu-ul{gap:0; padding: 11px 14px;}
+.s1-menu-ul{gap:0; padding: 11px 14px; overflow: hidden;}
 .s1-menu-a{padding: 7px 10px 6px; font-size: 13px; line-height: 17px;}
 
 
