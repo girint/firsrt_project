@@ -159,9 +159,9 @@
             </div>
             <div class="s4-b-d2">
                 <div class="s4-b-d2-d1">
-                    <div class="s4-b-d2-d1-d1">
-                        <ul class="s4-b-d2-ul">
-                            <li>
+                    <div class="s4-b-d2-d1-d1 slider-container">
+                        <ul class="s4-b-d2-ul slider-wrapper">
+                            <li class="slider-block">
                                 <ol class="s4-b-d2-d1-ol">
                                     <li class="s4-b-d2-d1-ol-li">
                                         <div class="s4-b-d2-d1-ol-li-d1">
@@ -243,7 +243,7 @@
                                     </li> 
                                 </ol>
                             </li>
-                            <li>
+                            <li class="slider-block">
                                 <ol class="s4-b-d2-d1-ol">
                                     <li class="s4-b-d2-d1-ol-li">
                                         <div class="s4-b-d2-d1-ol-li-d1">
@@ -316,7 +316,7 @@
                                     </li> 
                                 </ol>
                             </li>
-                            <li>
+                            <li class="slider-block">
                                 <ol class="s4-b-d2-d1-ol">
                                     <li class="s4-b-d2-d1-ol-li">
                                         <div class="s4-b-d2-d1-ol-li-d1">
@@ -389,7 +389,7 @@
                                     </li> 
                                 </ol>
                             </li>
-                            <li>
+                            <li class="slider-block">
                                 <ol class="s4-b-d2-d1-ol">
                                     <li class="s4-b-d2-d1-ol-li">
                                         <div class="s4-b-d2-d1-ol-li-d1">
@@ -462,7 +462,7 @@
                                     </li> 
                                 </ol>
                             </li>
-                            <li>
+                            <li class="slider-block">
                                 <ol class="s4-b-d2-d1-ol">
                                     <li class="s4-b-d2-d1-ol-li">
                                         <div class="s4-b-d2-d1-ol-li-d1">
@@ -537,8 +537,10 @@
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
-
+                <button id="prevBtn">이전</button>
+                <button id="nextBtn">다음</button>
 
             </div>
         </section>
@@ -940,10 +942,100 @@
     </main>
 
 
+    <script>
+        const wrapper = document.querySelector('.slider-wrapper');
+        const blocks = document.querySelectorAll('.slider-block');
+        const container = document.querySelector('.slider-container');
+
+        let currentIndex = 0;
+        const blockWidth = blocks[0].offsetWidth + 0; // 블록 너비 + 간격
+        const visibleCount = 3; // 한 화면에 보이는 블록 수
+        const maxIndex = blocks.length - visibleCount; // 슬라이드 가능한 최대 인덱스
+
+        function slideTo(index) {
+            if (index < 0) index = 0;
+            if (index > maxIndex) index = maxIndex;
+            currentIndex = index;
+            wrapper.style.transform = `translateX(${-blockWidth * currentIndex}px)`;
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => slideTo(currentIndex - 2));
+        document.getElementById('nextBtn').addEventListener('click', () => slideTo(currentIndex + 2));
+    </script>
 
 
 
-    <footer>
+
+
+
+    <hr>
+    <footer class="footer-main">
+        <div class="foot-div">
+            <div class="foot-d1-d1">
+                <ul class="foot-conform">
+                    <li><a href="#" class="foot-conform-a">
+                        <svg style="margin-right: 6px;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.07A7.953 7.953 0 004.25 8.25h-.85A2.75 2.75 0 00.648 11v2a2.75 2.75 0 002.75 2.75h1.4a.75.75 0 00.75-.75v-.574a.76.76 0 00.002-.06V10.02a6.45 6.45 0 0112.9 0v4.943a4.909 4.909 0 01-3.829 4.788 2.25 2.25 0 10-.012 1.53 6.411 6.411 0 005.293-5.531h.699a2.75 2.75 0 002.75-2.75v-2a2.75 2.75 0 00-2.75-2.75h-.849a7.953 7.953 0 00-7.752-6.18zM11.25 11a.75.75 0 00-1.5 0v.8a.75.75 0 001.5 0V11zm2.25-.75a.75.75 0 01.75.75v.8a.75.75 0 01-1.5 0V11a.75.75 0 01.75-.75zM11.75 20.5a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.398 9.75c-.69 0-1.25.56-1.25 1.25v2c0 .69.56 1.25 1.25 1.25h.65v-4.5h-.65zM21.852 11c0-.69-.56-1.25-1.25-1.25h-.65v4.5h.65c.69 0 1.25-.56 1.25-1.25v-2z" fill="currentColor"></path></svg>
+                        고객센터</a></li>
+                    <li><a href="#" class="foot-conform-a">
+                        <svg style="margin-right: 6px;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1v994a0"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.75 4.61a1.75 1.75 0 00-2.526-1.568L7.734 6.75H5A1.75 1.75 0 003.25 8.5v7c0 .966.784 1.75 1.75 1.75h2.734l7.49 3.707a1.75 1.75 0 002.526-1.568V4.611zm-1.86-.223a.25.25 0 01.36.224v14.778a.25.25 0 01-.36.224l-7.648-3.785-.157-.078H5a.25.25 0 01-.25-.25v-7A.25.25 0 015 8.25h3.085l.157-.078 7.647-3.785zm5.46 5.914a.75.75 0 00-1.5 0v3.4a.75.75 0 001.5 0v-3.4z" fill="currentColor"></path></svg>
+                    공지사항</a></li>
+                </ul>
+                <div class="foot-conform2">
+                    <div class="foot-service">
+                        <div class="foot-ulname">서비스</div>
+                        <ul>
+                            <li>제휴카드</li>
+                            <li>뷰어 다운로드</li>
+                            <li>CP사이트</li>
+                            <li>리디바탕</li>
+                        </ul>
+                    </div>
+                    <div class="foot-menu">
+                        <div class="foot-service">
+                            <div class="foot-ulname">기타문의</div>
+                            <ul>
+                                <li>콘텐츠 제공 문의</li>
+                                <li>사업제휴문의</li>
+                            </ul>
+                        </div>
+                        <div class="foot-service">
+                            <div class="foot-ulname">회사</div>
+                            <ul>
+                                <li>회사 소개</li>
+                                <li>인재채용</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-d1-d2">
+                <span>리디(주) 사업자 정보</span>
+                <span><svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1qx34im"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"></path></svg></span>
+
+                <ul class="foot-impo-ul">
+                    <li class="foot-impo-li"><a href="#" >이용약관</a></li>
+                    <li class="foot-impo-li"><a href="#" rel="noopener noreferrer" target="_blank"">개인정보 처리방침</a></li>
+                    <li class="foot-impo-li"><a href="#" ">청소년보호정책</a></li>
+                    <li class="foot-impo-li"><a href="#" ">사업자정보확인</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="foot-icon">
+            <li class="foot-icon-li"><a href="#" class="foot-icin-li-a">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.61 13.253l.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A8.796 8.796 0 0013.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647h1.634z" fill="currentColor"></path></svg></a></li>
+            <li class="foot-icon-li"><a href="#" class="foot-icin-li-a">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"d="M14.687 6.3H9.314A3.013 3.013 0 006.3 9.313v5.373A3.013 3.013 0 009.314 17.7h5.373a3.013 3.013 0 003.013-3.012V9.313A3.012 3.012 0 0014.687 6.3zm0-1.3H9.314A4.314 4.314 0 005 9.313v5.373A4.313 4.313 0 009.314 19h5.373A4.312 4.312 0 0019 14.688V9.313A4.31 4.31 0 0014.687 5zm1.871 3.28a.937.937 0 11-1.874-.002.937.937 0 011.874.001zM14.2 12a2.2 2.2 0 11-4.4 0 2.2 2.2 0 014.4 0zm1.3 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"fill="currentColor"></path></svg></a></li>
+            <li class="foot-icon-li"><a href="https://twitter.com/RIDI_twt"class="foot-icin-li-a">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.776 5.5l4.83 6.43-4.856 5.237h1.092l4.254-4.583 3.433 4.583h3.721l-5.101-6.796L17.674 5.5h-1.092l-3.923 4.217L9.497 5.5h-3.72zm1.607.802h1.713l7.547 10.063H14.93L7.383 6.302z"fill="#787878"></path></svg></a></li>
+            <li class="foot-icon-li"><a href="#" class="foot-icin-li-a">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.521 16.57A1 1 0 019 15.717V8.283a1 1 0 011.521-.853l6.083 3.717a1 1 0 010 1.706L10.52 16.57z"fill="currentColor"></path></svg></a></li>
+            <li class="foot-icon-li"><a href="#"class="foot-icin-li-a">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.371 5h2.411s1.113 2.656 3.718 2.911l-.46 2.35s-1.838-.052-3.268-1.533v5.822s0 1.226-.664 2.247c0 0-1.073 1.941-3.473 2.145 0 0-1.736.205-3.268-.919 0 0-1.635-1.021-1.839-3.268 0 0-.357-2.094 1.481-3.83 0 0 1.226-1.43 3.984-1.226v2.4h-.767s-1.532-.102-2.144 1.43c0 0-.562 1.48.663 2.502 0 0 .92.817 2.146.409 0 0 1.174-.307 1.43-1.634 0 0 .05-.154.05-.766V5z"fill="#787878"></path></svg></a></li>
+        </ul>
     </footer>
 </body>
 </html>

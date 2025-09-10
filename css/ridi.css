@@ -1,17 +1,9 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
-ul, ol{list-style-type: none;}
+ul, ol,li{list-style-type: none;}
 li{line-height: initial;}
 a{text-decoration: none;color: #333;font-weight: bold; cursor: pointer;background: transparent;}
 div{display: block}
-html {
-                line-height: normal;
-                margin: 0;
-                padding: 0;
-                color: #141414;
-                font-family: Pretendard Variable,Pretendard Std Variable,Pretendard JP Variable,-apple-system,BlinkMacSystemFont,system-ui,Roboto,Helvetica Neue,Segoe UI,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif;
-                font-weight: 400;
-                letter-spacing: -0.03em;
-                font-size: 14px;}
+html {line-height: normal;margin: 0;padding: 0;color: #141414;font-family: Pretendard Variable,Pretendard Std Variable,Pretendard JP Variable,-apple-system,BlinkMacSystemFont,system-ui,Roboto,Helvetica Neue,Segoe UI,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif;font-weight: 400;letter-spacing: -0.03em;font-size: 14px;}
 hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 
 
@@ -75,6 +67,7 @@ header{width: 100%;}
 .s4-b-d2-d1{display: flex;width: 100%;overflow: hidden;}
 /* .s4-b-d2-d1-d1{background-color: aliceblue;} */
 .s4-b-d2-ul{display: flex; flex-direction: row;}
+.s4-b-d2-d1-ol{display: flex ; flex-direction: column; width: max-content;transition: transform 0.3s ease;}
 .s4-b-d2-d1-ol li:not(:nth-of-type(3n)){margin-bottom: 6px;}
 .s4-b-d2-d1-ol-li{width: 370px;height: 116px;}
 .s4-b-d2-d1-ol-li-d1{position: relative;display: flex;height: 100%;}
@@ -92,3 +85,33 @@ header{width: 100%;}
 .s4-b-d2-d1-ol-li-d1-d3-form-member{margin-top: 6px;display: flex;}
 /* .s4-b-d2-d1-ol-li-d1-d3-form-member p{color: rgb(120, 120, 120); display: block;flex: 0 1 auto; overflow: hidden; font-size: 14px; line-height: 17px;} */
 .s4-b-d2-d1-ol-li-d1-d3-form-star{display: flex;flex-direction: column;margin-top: 7px;}
+
+
+
+
+
+/* 푸터 디자인 진행시작 */
+.footer-main{max-width: 1170px; margin: 0 auto ;padding: 41px 26px 20px 26px; display: flex; justify-content: space-between;flex-wrap: wrap; }
+.foot-div{display: flex; flex-direction: column; flex: 1;}
+.foot-d1-d1{display: flex; flex-direction: row; }
+.foot-d1-d2{margin-top:60px ; margin-bottom: 20px;}
+.foot-conform {display: flex;flex-direction: column  ;width: 185px ;}
+.foot-conform li{display: inline-flex; align-items: center;margin: 10px 0 ;}
+.foot-conform-a{display: flex; align-items: center;font-size: 13px; line-height: 16px; color: #787878; font-weight: bold;}
+.foot-conform2{display: flex;  flex: 1; }
+.foot-menu{display: flex; flex: 2; }
+.foot-service{display: flex; flex-direction: column; max-width: 185px; margin-right: 20%;}
+.foot-ulname{ font-size: 13px; line-height: 16px; color: #787878; font-weight: 700; padding: 4px 0; margin-bottom: 12px;}
+.foot-conform2 ul{display: flex;flex-direction: column;}
+.foot-conform2 ul li{font-size: 13px; line-height: 16px; color: #787878; padding: 6px 0; align-items: center;}
+.foot-conform2 ul li:first-of-type{padding-top: 0;}
+
+
+.foot-icon{display: flex;padding-bottom: 30px;padding: 0 4px;}
+.foot-icon-li{color: #787878;margin-left: 10px;}
+.foot-icon-li:first-of-type{margin-left: 0;}
+.foot-icin-li-a{width: 44px;height: 44px;display: inline-flex;justify-content: center;align-items: center;border: 1px solid #e6e6e6;border-radius: 22px;}
+
+.foot-impo-ul{display: flex;align-items: center;}
+.foot-impo-li{display: inline-flex;height: 13px;line-height: 13px;font-size: 11px;color: #787878;}
+.foot-impo-li::before {content: '';display: inline-block;background: #f0f0f0;width: 1px; height: 9px;margin: 2px 6px;}
