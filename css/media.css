@@ -1,7 +1,7 @@
 @media(max-width :767px){
 .header-detail1{padding: 1px 8px 0 18px;}
 .h-d1-s-id1{display: none;}
-.h-d1-s-id11{border: 1px solid #787878; border-radius: 99px; margin: 7px 8px 5px ; padding: 6px 11px; }
+.h-d1-s-id2{border: 1px solid #787878; border-radius: 99px; margin: 7px 8px 5px ; padding: 6px 11px; }
 #h-d1-sid {flex-basis: 100%; width: 100%;  justify-content: flex-start;}
 #h-d1-s{ width: 100%;margin-right: 0;}
 #logo1{position: absolute; margin-bottom: 30px;}
