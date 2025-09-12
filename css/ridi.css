@@ -49,7 +49,9 @@ hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 .basic-title2{width: 100%;height: 100%;display: flex;justify-content: space-between;align-items: center;}
 .basic-bigbox{position: relative;display: flex;height: 100%;}
 .basic-bigbox-d3{display: flex;flex-direction: column; justify-content: center; align-items:start; width: 184px; height: 100%; margin-right: 26px;}
-
+.basic-ol{display: flex;flex-direction: column; width: max-content;transition: transform 0.3s ease;}
+.basic-li{width: 370px;height: 116px;}
+.basic-ol li:not(:nth-of-type(3n)){margin-bottom: 6px;}
 
 
 /* 바디 세번째 섹선 */
@@ -67,18 +69,16 @@ hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 .s4-b-d2{position: relative;}
 .s4-b-d2-d1{display: flex;width: 100%;overflow: hidden;}
 .s4-b-d2-ul{display: flex;}
-.s4-b-d2-d1-ol{display: flex;flex-direction: column; width: max-content;transition: transform 0.3s ease;}
-.s4-b-d2-d1-ol-li{width: 370px;height: 116px;}
-.s4-b-d2-d1-ol li:not(:nth-of-type(3n)){margin-bottom: 6px;}
+
 
 
 
 /* 자바써야할곳 */
 .basic-form{width: 100%;}
-.basic-imgbox{display: flex;flex-direction: column;justify-content: center;width: 80px; background-color: #c4c4c4; border-radius: 5px;}
+.basic-imgbox3,.basic-imgbox1{display: flex;flex-direction: column;justify-content: center;width: 80px; background-color: #c4c4c4; border-radius: 5px;}
 .basic-index{font-weight: 500;font-size: 18px;line-height: 21px;color: rgb(20,20,20);}
 .basic-indexbox{display: flex;justify-content: center; align-items: center; width: 80px; height: 100%;}
-.title-free{white-space:nowrap ;overflow: hidden;text-overflow: ellipsis;}
+.title-free3,.title-free1{white-space:nowrap ;overflow: hidden;text-overflow: ellipsis;}
 .member-free{margin-top: 6px;display: flex;}
 .star-free{display: flex;flex-direction: column;margin-top: 7px;}
 .sbd-title{font-size: 16px;line-height: 19px;}
@@ -94,7 +94,7 @@ hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 .s5-li-div{position: relative; display: flex;flex-direction: column; align-items: flex-start; width: 180px;}
 .s5-li-div-div{width: 100%; padding-bottom: 145%; position: relative;align-items: stretch; box-sizing: border-box;}
 .s5-li-div img{width: 100%; max-height: 100%; position: absolute;border-radius: 4px; overflow: hidden;}
-.s5-li-div2 {width: 100%;height: 84px; margin-top: 10px;}
+.s5-li-div2 {width: 100%;height: 84px; margin-top: 10px; display: flex;flex-direction: column;}
 
 
 
@@ -111,16 +111,6 @@ hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 .eventbox-a-div1 p{max-width: 200px;color: #ffffff;font-size: 15px;overflow: hidden;text-overflow: ellipsis; max-height: calc(20px * 2) ; line-height: 20px;}
 .eventbox-a-div2{width: 200px;height: 90px;display: flex;align-items: center;}
 .eventbox-a-div2 img{max-width:100% ;max-height: 100%; border-radius: 4px;}
-
-
-
-
-
-
-
-
-
-
 
 
 
