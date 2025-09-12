@@ -2,25 +2,25 @@
 // 함수명  : checkCollision(고정박스, 이동박스, 왼쪽버튼, 오른쪽 버튼)
 // 기능   :  더이상 이동할수 없는 버튼은 안보이도록 히든 처리
 //**************************************************************************** 
-function checkCollision(a, b, c, d) {
-    let box1 = document.getElementById(a);
-    let box2 = document.getElementById(b);
-    let btn1 = document.getElementById(c);
-    let btn2 = document.getElementById(d);
+// function checkCollision(a, b, c, d) {
+//     let box1 = document.getElementById(a);
+//     let box2 = document.getElementById(b);
+//     let btn1 = document.getElementById(c);
+//     let btn2 = document.getElementById(d);
 
-    let rect1 = box1.getBoundingClientRect();
-    console.log(rect1.x)
-    let rect2 = box2.getBoundingClientRect();
-    console.log(rect2.x)
+//     let rect1 = box1.getBoundingClientRect();
+//     console.log(rect1.x)
+//     let rect2 = box2.getBoundingClientRect();
+//     console.log(rect2.x)
 
-    if (rect1.x == rect2.x) {
-        btn1.style.visibility = 'hidden';
-        btn2.style.visibility = 'visible';
-    } else {
-        btn1.style.visibility = 'visible';
-        btn2.style.visibility = 'hidden';
-    }
-}
+//     if (rect1.x == rect2.x) {
+//         btn1.style.visibility = 'hidden';
+//         btn2.style.visibility = 'visible';
+//     } else {
+//         btn1.style.visibility = 'visible';
+//         btn2.style.visibility = 'hidden';
+//     }
+// }
 
 
 
@@ -85,3 +85,129 @@ prevBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('sc
 //event
 nextBtne.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_starte', 'li_starte', 'prevBtne','nextBtne'); }, 510); });
 prevBtne.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_ende', 'li_ende', 'nextBtne','prevBtne'); }, 510); });
+
+//**************************************************************************** 
+// 기능  : 실험하기
+// 총 개수  아직 진행중
+//**************************************************************************** 
+
+
+
+
+
+
+async function fetchBooks(query) {
+    const params = new URLSearchParams({
+        target: "title",
+        query,
+        size: 12
+    });
+    const url = `https://dapi.kakao.com/v3/search/book?${params}`;
+
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error(`HTTP 오류: ${response.status}`);
+    }
+
+    return title1=await response.json();
+}
+
+
+
+
+for(let i=0; i<11 ; i++){
+
+
+
+
+    let a=document.querySelectorAll('.s5-li');
+    let b=document.createElement("div")
+    b.classList.add("s5-li-div")
+    let c=document.createElement("div")
+    c.classList.add("s5-li-div2")
+    let d=document.createElement("div")
+    d.classList.add("s5-li-div-div")
+    let a3=document.createElement("a")
+    a3.href="#"
+    a3.classList.add("img11")
+    const img1=document.createElement("img")
+ 
+
+
+    let div11=document.createElement("div")
+    div11.id="s5_title_java"
+
+    let div12=document.createElement("div")
+    div12.classList.add("member-free")
+
+    let div13=document.createElement("div")
+    div13.classList.add("star-free")
+
+    let p21=document.createElement("p")
+    let a21=document.createElement("a")
+    a21.classList.add("sbd-member")
+    p21.appendChild(a21)
+
+    let p22=document.createElement("p")
+    p22.classList.add("sbd-member-star")
+
+    let p23=document.createElement("p")
+    let a23=document.createElement("a")
+    a23.classList.add("sbd-member")
+    p23.appendChild(a23)
+
+    let p33=document.createElement("p")
+    
+    
+    a3.appendChild(img1)
+    d.appendChild(a3)
+    b.appendChild(d)
+    c.appendChild(div11)
+
+    div12.appendChild(p21)
+    div12.appendChild(p22)
+    div12.appendChild(p23)
+    c.appendChild(div12)
+    div13.appendChild(p33)
+    c.appendChild(div13)
+    a[i].appendChild(b)
+    a[i].appendChild(c)
+    
+}
+
+
+async function bookData() {
+
+    const querys = ["액션"];
+
+    for (const q of querys) {
+        
+        const data = await fetchBooks(q);
+        const label5_title2 = document.querySelectorAll('#s5_title_java');
+        const label5_img = document.querySelectorAll('.img11');
+        console.log(label5_img)
+        for(let i=0; i<10;i++){           
+            
+            const cre=document.createElement("a")
+            cre.textContent=data.documents[i].title;
+            label5_title2[i].appendChild(cre);
+
+            const img=document.createElement("img")
+            // console.log(data.documents[i].thumbnail)
+            img.src=data.documents[i].thumbnail;
+
+            label5_img[i].appendChild(img);
+
+
+        };
+
+    
+            }}
+bookData()
+
