@@ -1,5 +1,5 @@
 //**************************************************************************** 
-// 기능  : lebel5 속성 추가해주기
+// 기능  : label5 속성 추가해주기
 // 일일히 자식속성이 누구냐에 따라서 지정해줘야할것이 많음
 //**************************************************************************** 
 for(let i=0; i<12 ; i++){
@@ -40,14 +40,12 @@ for(let i=0; i<12 ; i++){
 // innerHTML 로 한번에 추가
 //**************************************************************************** 
 let label3 = document.querySelectorAll('.label3_li');
-console.log(label3)
 label3.forEach(insert => {
 insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox3"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d3"><div class="basic-form"><div class="title-free3"></div><div class="member-free"><p class="p_member3"></p><p class="sbd-member-star">*</p><p class="p_free3"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
 
 let label1 = document.querySelectorAll('.label1_li');
-console.log(label1)
 label1.forEach(insert => {
-insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox1"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d1"><div class="basic-form"><div class="title-free1"></div><div class="member-free"><p class="p_member1"></p><p class="sbd-member-star">*</p><p class="p_free1"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
+insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox4"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d1"><div class="basic-form"><div class="title-free4"></div><div class="member-free"><p class="p_member1"></p><p class="sbd-member-star">*</p><p class="p_free1"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
 
 
 
@@ -63,7 +61,6 @@ button.innerHTML = `
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor">dd</path></svg>` ;});
 
 let stars = document.querySelectorAll('.p_star');
-console.log(stars)
 stars.forEach(insert => {
 insert.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" ><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg><span>4.9  </span><span>(3,759)</span>` 
 ;});
@@ -93,11 +90,20 @@ function checkCollision(a, b, c, d) {
 //**************************************************************************** 
 // 실행      : checkCollision 함수 진행시키기
 // 총 개수   :  2개 (label5 , event)
+// 앞으로 해야할것 상수를 지정해주면 그 상수가 알서 숫자 다 바꿔주는 함수 만들기
 //**************************************************************************** 
 // window.addEventListener('scroll', checkCollision); 이건 스크롤용
+//lavel3
+nextBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start3', 'li_start3', 'prevBtn3','nextBtn3'); }, 510); });
+prevBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end3', 'li_end3', 'nextBtn3','prevBtn3'); }, 510); });
+
+//lavel4
+nextBtn4.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start4', 'li_start4', 'prevBtn4','nextBtn4'); }, 510); });
+prevBtn4.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end4', 'li_end4', 'nextBtn4','prevBtn4'); }, 510); });
+
 //lavel5
-nextBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start', 'li_start', 'prevBtn3','nextBtn3'); }, 510); });
-prevBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end', 'li_end', 'nextBtn3','prevBtn3'); }, 510); });
+nextBtn5.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start5', 'li_start5', 'prevBtn5','nextBtn5'); }, 510); });
+prevBtn5.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end5', 'li_end5', 'nextBtn5','prevBtn5'); }, 510); });
 
 //event
 nextBtne.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_starte', 'li_starte', 'prevBtne','nextBtne'); }, 510); });
@@ -137,10 +143,9 @@ function touchbar(a, b, c, d, e, f, g, h) {
 // 총 개수   :  4개
 //**************************************************************************** 
 touchbar('.slider-wrapper4', '.slider-block4', '.slider-container4', 'prevBtn4', 'nextBtn4', 3, 0, 3);
-touchbar('.slider-wrapper1', '.slider-block1', '.slider-container1', 'prevBtn1', 'nextBtn1', 3, 0, 3);
-touchbar('.slider-wrapper3', '.slider-block3', '.slider-container3', 'prevBtn3', 'nextBtn3', 6, 6, 6);
+touchbar('.slider-wrapper3', '.slider-block3', '.slider-container3', 'prevBtn3', 'nextBtn3', 3, 0, 3);
 touchbar('.slider-wrappere', '.slider-blocke', '.slider-containere', 'prevBtne', 'nextBtne', 3, 6, 3);
-
+touchbar('.slider-wrapper5', '.slider-block5', '.slider-container5', 'prevBtn5', 'nextBtn5', 6, 6, 6);
 
 
 
@@ -152,8 +157,10 @@ touchbar('.slider-wrappere', '.slider-blocke', '.slider-containere', 'prevBtne',
 async function fetchBooks(query) {
     const params = new URLSearchParams({target: "title",query,size: 40});
     const url = `https://dapi.kakao.com/v3/search/book?${params}`;
+    
     const response = await fetch(url,{method: 'GET',headers: {
             Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"}});
+    console.log(response)
     if (!response.ok) { throw new Error(`HTTP 오류: ${response.status}`); }
     return response.json();
 }
@@ -192,6 +199,6 @@ async function bookData(a,b,c,d) {
 // 실행  : bookData 함수 진행시키기
 // 총 개수   :  2개
 //**************************************************************************** 
-bookData("기린",'.basic-imgbox3','.title-free3','.p_member3');
-bookData("기린",'.basic-imgbox1','.title-free1','.p_member1');
-bookData("기린",'.img11','#s5_title_java','.p_member');
+bookData("HTML",'.basic-imgbox3','.title-free3','.p_member3');
+bookData("CSS",'.basic-imgbox4','.title-free4','.p_member1');
+bookData("javascript",'.img11','#s5_title_java','.p_member');
