@@ -9,11 +9,11 @@ for(let i=0; i<12 ; i++){
     let d=document.createElement("div");d.classList.add("s5-li-div-div");
     let a3=document.createElement("a");a3.href="#";a3.classList.add("img11");
  
-    let div11=document.createElement("div");div11.id="s5_title_java";
+    let div11=document.createElement("div");div11.classList.add("title-free5");
     let div12=document.createElement("div");div12.classList.add("member-free");
     let div13=document.createElement("div");div13.classList.add("star-free");
 
-    let p21=document.createElement("p");p21.classList.add("p_member");
+    let p21=document.createElement("p");p21.classList.add("p_member5");
     let p22=document.createElement("p");p22.classList.add("sbd-member-star");
         p22.textContent='*';
     let p23=document.createElement("p");p23.classList.add("p_free");
@@ -32,6 +32,39 @@ for(let i=0; i<12 ; i++){
     a[i].appendChild(c);
     }
 
+//**************************************************************************** 
+// 기능  : label5 속성 추가해주기
+// 일일히 자식속성이 누구냐에 따라서 지정해줘야할것이 많음
+//**************************************************************************** 
+for(let i=0; i<12 ; i++){
+    let a=document.querySelectorAll('.s6-li');
+    let b=document.createElement("div");b.classList.add("s5-li-div");
+    let c=document.createElement("div");c.classList.add("s5-li-div2");
+    let d=document.createElement("div");d.classList.add("s5-li-div-div");
+    let a3=document.createElement("a");a3.href="#";a3.classList.add("img12");
+ 
+    let div11=document.createElement("div");div11.classList.add("title-free6");
+    let div12=document.createElement("div");div12.classList.add("member-free");
+    let div13=document.createElement("div");div13.classList.add("star-free");
+
+    let p21=document.createElement("p");p21.classList.add("p_member6");
+    let p22=document.createElement("p");p22.classList.add("sbd-member-star");
+        p22.textContent='*';
+    let p23=document.createElement("p");p23.classList.add("p_free");
+        p23.textContent="외 1명";  
+    let p33=document.createElement("p");p33.classList.add("p_star");
+
+    
+    
+    b.appendChild(d);d.appendChild(a3);
+    c.appendChild(div11);
+    c.appendChild(div12);   div12.appendChild(p21); 
+                            div12.appendChild(p22);
+                            div12.appendChild(p23);
+    c.appendChild(div13);   div13.appendChild(p33); 
+    a[i].appendChild(b);
+    a[i].appendChild(c);
+    }
 
 //**************************************************************************** 
 // 기능  : lebel3 속성 추가해주기
@@ -41,11 +74,11 @@ for(let i=0; i<12 ; i++){
 //**************************************************************************** 
 let label3 = document.querySelectorAll('.label3_li');
 label3.forEach(insert => {
-insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox3"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d3"><div class="basic-form"><div class="title-free3"></div><div class="member-free"><p class="p_member3"></p><p class="sbd-member-star">*</p><p class="p_free3"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
+insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox3"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index3">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d3"><div class="basic-form"><div class="title-free3"></div><div class="member-free"><p class="p_member3"></p><p class="sbd-member-star">*</p><p class="p_free3"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
 
-let label1 = document.querySelectorAll('.label1_li');
-label1.forEach(insert => {
-insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox4"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d1"><div class="basic-form"><div class="title-free4"></div><div class="member-free"><p class="p_member1"></p><p class="sbd-member-star">*</p><p class="p_free1"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
+let label4 = document.querySelectorAll('.label4_li');
+label4.forEach(insert => {
+insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox4"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index4">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d4"><div class="basic-form"><div class="title-free4"></div><div class="member-free"><p class="p_member4"></p><p class="sbd-member-star">*</p><p class="p_free4"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
 
 
 
@@ -75,9 +108,9 @@ function checkCollision(a, b, c, d) {
     const btn1 = document.getElementById(c);
     const btn2 = document.getElementById(d);
 
-    const rect1 = box1.getBoundingClientRect();
+    const rect1 = box1.getBoundingClientRect();   
     const rect2 = box2.getBoundingClientRect();
-
+    console.log(rect1,rect2)
     if (rect1.x == rect2.x) {
         btn1.style.visibility = 'hidden';
         btn2.style.visibility = 'visible';
@@ -85,6 +118,7 @@ function checkCollision(a, b, c, d) {
         btn1.style.visibility = 'visible';
         btn2.style.visibility = 'hidden';
     }}
+// 좌표값 지정해서 특정 부분까지 오면 사라지도록 if 번위 작성하기
 
 
 //**************************************************************************** 
@@ -104,6 +138,10 @@ prevBtn4.addEventListener('click', () => { setTimeout(() => { checkCollision('sc
 //lavel5
 nextBtn5.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start5', 'li_start5', 'prevBtn5','nextBtn5'); }, 510); });
 prevBtn5.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end5', 'li_end5', 'nextBtn5','prevBtn5'); }, 510); });
+
+//lavel6
+nextBtn6.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start6', 'li_start6', 'prevBtn6','nextBtn6'); }, 510); });
+prevBtn6.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end6', 'li_end6', 'nextBtn6','prevBtn6'); }, 510); });
 
 //event
 nextBtne.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_starte', 'li_starte', 'prevBtne','nextBtne'); }, 510); });
@@ -146,6 +184,7 @@ touchbar('.slider-wrapper4', '.slider-block4', '.slider-container4', 'prevBtn4',
 touchbar('.slider-wrapper3', '.slider-block3', '.slider-container3', 'prevBtn3', 'nextBtn3', 3, 0, 3);
 touchbar('.slider-wrappere', '.slider-blocke', '.slider-containere', 'prevBtne', 'nextBtne', 3, 6, 3);
 touchbar('.slider-wrapper5', '.slider-block5', '.slider-container5', 'prevBtn5', 'nextBtn5', 6, 6, 6);
+touchbar('.slider-wrapper6', '.slider-block6', '.slider-container6', 'prevBtn6', 'nextBtn6', 6, 6, 6);
 
 
 
@@ -155,12 +194,11 @@ touchbar('.slider-wrapper5', '.slider-block5', '.slider-container5', 'prevBtn5',
 // 기능    : 특정파라미터를 정해주면 url 만들어주기
 //**************************************************************************** 
 async function fetchBooks(query) {
-    const params = new URLSearchParams({target: "title",query,size: 40});
+    const params = new URLSearchParams({target: "title",query,size: 20});
     const url = `https://dapi.kakao.com/v3/search/book?${params}`;
     
     const response = await fetch(url,{method: 'GET',headers: {
             Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"}});
-    console.log(response)
     if (!response.ok) { throw new Error(`HTTP 오류: ${response.status}`); }
     return response.json();
 }
@@ -170,12 +208,13 @@ async function fetchBooks(query) {
 // 함수명  : bookData(컨텐츠,img넣을 박스, 제목넣을 박스, 멤버넣을 박스)
 // 기능    : 필요한 부분은 태그를 직점 생성해서 그 태그안에 API자료 넣기
 //**************************************************************************** 
-async function bookData(a,b,c,d) {
+async function bookData(a,b,c,d,e) {
 
     const data = await fetchBooks(a);
     const label5_img = document.querySelectorAll(b);
     const label5_title = document.querySelectorAll(c);
     const label5_member = document.querySelectorAll(d);
+    const label5_index = document.querySelectorAll(e);
     for (let i = 0; i < label5_title.length; i++) {
 
         //이미지추가
@@ -193,12 +232,34 @@ async function bookData(a,b,c,d) {
         member.classList.add("sbd-member");
         member.textContent = data.documents[i].authors;
         label5_member[i].appendChild(member);
+
+        //인덱스 추가
+        label5_index[i].textContent = i+1
     };
 }
 //**************************************************************************** 
 // 실행  : bookData 함수 진행시키기
 // 총 개수   :  2개
 //**************************************************************************** 
-bookData("HTML",'.basic-imgbox3','.title-free3','.p_member3');
-bookData("CSS",'.basic-imgbox4','.title-free4','.p_member1');
-bookData("javascript",'.img11','#s5_title_java','.p_member');
+bookData("기린",'.basic-imgbox3','.title-free3','.p_member3',".basic-index3");
+bookData("기린",'.basic-imgbox4','.title-free4','.p_member4',".basic-index4");
+bookData("기린",'.img11','.title-free5','.p_member5',".basic-index4");
+bookData("월",'.img12','.title-free6','.p_member6',".basic-index4");
+
+//**************************************************************************** 
+// 함수  : daydata(변수)
+// 기능  : 특정 요일에 지정한 카테고리의 메뉴들로 나오게 하기
+//**************************************************************************** 
+async function daydata(a){
+    const data = await fetchBooks(a);
+    const img = document.querySelectorAll('.img12 img');
+    const title = document.querySelectorAll('.title-free6 a');
+    const member = document.querySelectorAll('.p_member6 a');
+    for (let i = 0; i < title.length; i++) {
+
+        //이미지추가
+        img[i].src = data.documents[i].thumbnail;
+        title[i].textContent=data.documents[i].title;
+        member[i].textContent=data.documents[i].authors;
+      
+}}

@@ -31,8 +31,15 @@
 
 
 
+.footer-main{flex-direction:column;}
+.foot-d1-d1{flex-direction:column;}
+.foot-div{flex-direction:column; ;flex: none;}
+.foot-conform{width: auto; flex-direction: row;  width: auto; margin-bottom: 30px;}
+.foot-conform li{flex: 1;}
+.foot-conform2 div{flex: 1;}
 
-
+.foot-menu{flex-direction:column;}
+.foot-ulname{padding-bottom: 2px; margin-bottom: 0px;}
 
 
 
