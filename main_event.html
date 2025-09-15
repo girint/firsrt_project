@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>슬라이드 인/아웃 토글 애니메이션</title>
+<style>
+    .container {
+        width: 1000px;
+        height: 400px;
+        overflow :hidden;
+        margin: 0 auto;
+        cursor: pointer;
+        position: relative;
+        transition: transform 1s ease, clip-path 1s ease;
+    }
+    .img-wrapper{position: absolute; width: 1000px;height: 400px;}
+
+    .img1 {
+        width: 1000px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        transition: clip-path 0.6s ease;
+        clip-path: inset(0 450px 0 450px);
+        background-color: aquamarine;
+    }
+
+
+    .img2 {
+        width: 1000px;
+        height: 400px;
+
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        transition: clip-path 0.6s ease;
+        clip-path: inset(0 450px 0 450px);
+        display: none;
+        background-color: rgb(0, 0, 0);
+    }
+
+    /* 슬라이드 인 상태: 이미지 기본형 */
+    .slide-in {
+        display: block;
+        width: 1000px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: -100px;
+        clip-path: inset(0 450px 0 450px);
+        transform: translateX(450px);
+        opacity: 1;
+        transition: transform 1s ease, clip-path 1s ease, opacity 1s ease;
+    }
+
+    .expanded {
+        display: block;
+        clip-path: inset(0 0 0 0);
+        transition: transform 1s ease, clip-path 1s ease;
+        /* transform: translateX(-450px); */
+    }
+
+    /* 슬라이드 아웃 상태: 왼쪽으로 슬라이드 및 중앙만 남고 점점 사라짐 */
+    .slide-out {
+        display: block;
+        opacity: 1;
+        transition: transform 2s ease, clip-path 3s ease;
+        transform: translateX(-100%);
+        clip-path: inset(0 450px 0 450px);
+    }
+
+
+
+    
+</style>
+</head>
+<body>
+<div style="display: flex;">
+  <div class="container" id="container">
+    <div class="img-wrapper">
+      <img class="img1 slide-in" src="#" alt="슬라이드 이미지" />
+    </div>
+    <div class="img-wrapper">
+      <img class="img2" src="#" alt="슬라이드 이미지" />
+    </div>
+  </div>
+</div>
+<script>
+  
+
+    
+    container.addEventListener('click', () => {
+        for(i in[0,1]){
+        const container = document.getElementById('container');
+        const image = document.getElementsByTagName('img');
+        if (image[i].classList.contains('slide-in')) {
+            image[i].classList.remove('slide-in');
+            image[i].classList.add('expanded');
+        } else if (image[i].classList.contains('expanded')) {
+            image[i].classList.remove('expanded');
+            image[i].classList.add('slide-out');
+        } else if (!image[i].classList.contains('slide-in') && !image[i].classList.contains('expanded') && !image[i].classList.contains('slide-out')) {
+            image[i].classList.add('slide-in');
+        }}
+
+    });
+
+</script>
+
+</body>
+</html>
