@@ -102,52 +102,36 @@ insert.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 11 11" fill="none
 // 함수명  : checkCollision(고정박스, 이동박스, 왼쪽버튼, 오른쪽 버튼)
 // 기능   :  더이상 이동할수 없는 버튼은 안보이도록 히든 처리
 //**************************************************************************** 
-function checkCollision(a, b, c, d) {
-    const box1 = document.getElementById(a);
-    const box2 = document.getElementById(b);
-    const btn1 = document.getElementById(c);
-    const btn2 = document.getElementById(d);
+function checkCollision(num) {
+  const list1 = ['scroll_start', 'li_start', 'scroll_end', 'li_end', 'prevBtn', 'nextBtn'];
+  const elements = list1.map(id => document.getElementById(id + num));
+  const [box1, box2, box3, box4, btn1, btn2] = elements;
 
-    const rect1 = box1.getBoundingClientRect();   
-    const rect2 = box2.getBoundingClientRect();
-    console.log(rect1,rect2)
-    if (rect1.x == rect2.x) {
-        btn1.style.visibility = 'hidden';
-        btn2.style.visibility = 'visible';
-    } else {
-        btn1.style.visibility = 'visible';
-        btn2.style.visibility = 'hidden';
-    }}
-// 좌표값 지정해서 특정 부분까지 오면 사라지도록 if 번위 작성하기
+  const [rect1, rect2, rect3, rect4] = elements.slice(0, 4).map(el => el.getBoundingClientRect());
 
+  const rect44 = rect4.x + 1300;
 
+  btn1.style.visibility = rect1.x > rect2.x ? 'visible' : 'hidden';
+  btn2.style.visibility = rect3.x <= rect44 ? 'visible' : 'hidden';}
 //**************************************************************************** 
-// 실행      : checkCollision 함수 진행시키기
-// 총 개수   :  2개 (label5 , event)
-// 앞으로 해야할것 상수를 지정해주면 그 상수가 알서 숫자 다 바꿔주는 함수 만들기
+// 함수명  : 버튼 실행시키기
+// 기능   :  아직 왼쪽 오른쪽 다른 버튼 이라 저렇게 만들었는데 합칠수 있는 방법 생각해보기
 //**************************************************************************** 
-// window.addEventListener('scroll', checkCollision); 이건 스크롤용
-//lavel3
-nextBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start3', 'li_start3', 'prevBtn3','nextBtn3'); }, 510); });
-prevBtn3.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end3', 'li_end3', 'nextBtn3','prevBtn3'); }, 510); });
+const buttons = [
+  { next: nextBtn3, prev: prevBtn3, num: 3 },
+  { next: nextBtn4, prev: prevBtn4, num: 4 },
+  { next: nextBtne, prev: prevBtne, num: 'e' },
+  { next: nextBtn5, prev: prevBtn5, num: 5 },
+];
 
-//lavel4
-nextBtn4.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start4', 'li_start4', 'prevBtn4','nextBtn4'); }, 510); });
-prevBtn4.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end4', 'li_end4', 'nextBtn4','prevBtn4'); }, 510); });
-
-//lavel5
-nextBtn5.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start5', 'li_start5', 'prevBtn5','nextBtn5'); }, 510); });
-prevBtn5.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end5', 'li_end5', 'nextBtn5','prevBtn5'); }, 510); });
-
-//lavel6
-nextBtn6.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_start6', 'li_start6', 'prevBtn6','nextBtn6'); }, 510); });
-prevBtn6.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_end6', 'li_end6', 'nextBtn6','prevBtn6'); }, 510); });
-
-//event
-nextBtne.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_starte', 'li_starte', 'prevBtne','nextBtne'); }, 510); });
-prevBtne.addEventListener('click', () => { setTimeout(() => { checkCollision('scroll_ende', 'li_ende', 'nextBtne','prevBtne'); }, 510); });
-
-
+buttons.forEach(({ next, prev, num }) => {
+  next.addEventListener('click', () => {
+    setTimeout(() => checkCollision(num), 510);
+  });
+  prev.addEventListener('click', () => {
+    setTimeout(() => checkCollision(num), 510);
+  });
+});
 //**************************************************************************** 
 // 함수명  : touchbar(고정박스,이동박스, 실제박스 ,왼쪽버튼, 오른쪽버튼, 이동시킬박스개수, 여백크기, 한화면에 보이는 박스수 )
 // 기능   :  정한 횟수만큼의 박스가 버튼 누를때  이동하는 이벤트
@@ -181,7 +165,7 @@ function touchbar(a, b, c, d, e, f, g, h) {
 // 총 개수   :  4개
 //**************************************************************************** 
 touchbar('.slider-wrapper4', '.slider-block4', '.slider-container4', 'prevBtn4', 'nextBtn4', 3, 0, 3);
-touchbar('.slider-wrapper3', '.slider-block3', '.slider-container3', 'prevBtn3', 'nextBtn3', 3, 0, 3);
+touchbar('.slider-wrapper3', '.slider-block3', '.slider-container3', 'prevBtn3', 'nextBtn3', 1, 0, 3);
 touchbar('.slider-wrappere', '.slider-blocke', '.slider-containere', 'prevBtne', 'nextBtne', 3, 6, 3);
 touchbar('.slider-wrapper5', '.slider-block5', '.slider-container5', 'prevBtn5', 'nextBtn5', 6, 6, 6);
 touchbar('.slider-wrapper6', '.slider-block6', '.slider-container6', 'prevBtn6', 'nextBtn6', 6, 6, 6);
@@ -263,3 +247,14 @@ async function daydata(a){
         member[i].textContent=data.documents[i].authors;
       
 }}
+
+
+
+const days = document.querySelectorAll('.s6-days');
+
+days.forEach(div => {
+  div.addEventListener('click', () => {
+    days.forEach(d => d.classList.remove('active'));
+    div.classList.add('active');
+  });
+});

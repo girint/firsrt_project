@@ -129,6 +129,10 @@ hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 .event2-a{color: #141414;font-size: 16px;font-weight: 400; line-height: 19px;}
 
 
+/* 요일별 섹션6 */
+.s6-days{display: flex; position: relative;cursor: pointer;color:#000000;font-size: 14px;line-height: 17px; min-width: 38px;min-height: 38px; justify-content: center; align-items: center;}
+
+.active{background-color: black; border:1px solid #c4c4c4;border-radius: 99px;;color: white;}
 
 /* footer 디자인 */
 .footer-main{max-width: 1170px; margin: 0 auto ;padding: 41px 26px 20px 26px; display: flex; justify-content: space-between;flex-wrap: wrap; }
