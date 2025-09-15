@@ -122,14 +122,15 @@ const buttons = [
   { next: nextBtn4, prev: prevBtn4, num: 4 },
   { next: nextBtne, prev: prevBtne, num: 'e' },
   { next: nextBtn5, prev: prevBtn5, num: 5 },
+  { next: nextBtn6, prev: prevBtn6, num: 6 },
 ];
 
 buttons.forEach(({ next, prev, num }) => {
   next.addEventListener('click', () => {
-    setTimeout(() => checkCollision(num), 510);
+    setTimeout(() => checkCollision(num), 520);
   });
   prev.addEventListener('click', () => {
-    setTimeout(() => checkCollision(num), 510);
+    setTimeout(() => checkCollision(num), 520);
   });
 });
 //**************************************************************************** 
@@ -178,7 +179,7 @@ touchbar('.slider-wrapper6', '.slider-block6', '.slider-container6', 'prevBtn6',
 // 기능    : 특정파라미터를 정해주면 url 만들어주기
 //**************************************************************************** 
 async function fetchBooks(query) {
-    const params = new URLSearchParams({target: "title",query,size: 20});
+    const params = new URLSearchParams({target: "title",query,size: 40});
     const url = `https://dapi.kakao.com/v3/search/book?${params}`;
     
     const response = await fetch(url,{method: 'GET',headers: {
@@ -202,6 +203,7 @@ async function bookData(a,b,c,d,e) {
     for (let i = 0; i < label5_title.length; i++) {
 
         //이미지추가
+        console.log()
         const img = document.createElement("img");
         img.src = data.documents[i].thumbnail;
         label5_img[i].appendChild(img);
@@ -225,7 +227,7 @@ async function bookData(a,b,c,d,e) {
 // 실행  : bookData 함수 진행시키기
 // 총 개수   :  2개
 //**************************************************************************** 
-bookData("기린",'.basic-imgbox3','.title-free3','.p_member3',".basic-index3");
+bookData("상수",'.basic-imgbox3','.title-free3','.p_member3',".basic-index3");
 bookData("기린",'.basic-imgbox4','.title-free4','.p_member4',".basic-index4");
 bookData("기린",'.img11','.title-free5','.p_member5',".basic-index4");
 bookData("월",'.img12','.title-free6','.p_member6',".basic-index4");
@@ -234,24 +236,26 @@ bookData("월",'.img12','.title-free6','.p_member6',".basic-index4");
 // 함수  : daydata(변수)
 // 기능  : 특정 요일에 지정한 카테고리의 메뉴들로 나오게 하기
 //**************************************************************************** 
-async function daydata(a){
-    const data = await fetchBooks(a);
-    const img = document.querySelectorAll('.img12 img');
-    const title = document.querySelectorAll('.title-free6 a');
-    const member = document.querySelectorAll('.p_member6 a');
-    for (let i = 0; i < title.length; i++) {
+async function daydata(a) {
+  const data = await fetchBooks(a);
+  const img = document.querySelectorAll('.img12 img');
+  const title = document.querySelectorAll('.title-free6 a');
+  const member = document.querySelectorAll('.p_member6 a');
+  for (let i = 0; i < title.length; i++) {
 
-        //이미지추가
-        img[i].src = data.documents[i].thumbnail;
-        title[i].textContent=data.documents[i].title;
-        member[i].textContent=data.documents[i].authors;
-      
-}}
+    //이미지추가
+    img[i].src = data.documents[i].thumbnail;
+    title[i].textContent = data.documents[i].title;
+    member[i].textContent = data.documents[i].authors;
+  }
+}
 
 
-
+//**************************************************************************** 
+// 기능  : active 설정
+// 요약  : 클릭을 하면 다른 아이들의 active는 다 사라지고 클릭한 친구만 주기
+//**************************************************************************** 
 const days = document.querySelectorAll('.s6-days');
-
 days.forEach(div => {
   div.addEventListener('click', () => {
     days.forEach(d => d.classList.remove('active'));
