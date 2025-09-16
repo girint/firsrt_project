@@ -262,3 +262,65 @@ days.forEach(div => {
     div.classList.add('active');
   });
 });
+
+//**************************************************************************** 
+// 기능  : active 설정
+// 요약  : 클릭을 하면 다른 아이들의 active는 다 사라지고 클릭한 친구만 주기
+//**************************************************************************** 
+
+container.addEventListener('click', () => {
+  for (i in [0, 1, 2, 3, 4, 5]) {
+    const container = document.getElementById('container');
+    const image = document.getElementsByTagName('img');
+    if (image[i].classList.contains('slide-in1')) {
+      image[i].classList.remove('slide-in1');
+      image[i].classList.add('slide-in');
+    } else if (image[i].classList.contains('slide-in')) {
+      image[i].classList.remove('slide-in')
+      image[i].classList.add('slide-in2');
+    } else if (image[i].classList.contains('slide-in2')) {
+      image[i].classList.remove('slide-in2')
+      image[i].classList.add('expanded');
+    } else if (image[i].classList.contains('expanded')) {
+      image[i].classList.remove('expanded');
+      image[i].classList.add('slide-out');
+    } else if (image[i].classList.contains('slide-out')) {
+      image[i].classList.remove('slide-out')
+      image[i].classList.add('slide-out-move');
+    } else if (image[i].classList.contains('slide-out-move')) {
+      image[i].classList.remove('slide-out-move')
+      image[i].classList.add('slide-in1');
+    }
+  }
+
+});
+
+const containers = document.getElementById('container');
+
+function toggleImageClasses() {
+  const images = document.getElementsByClassName('img2');
+  for (let i = 0; i < 6; i++) {
+    if (images[i].classList.contains('slide-in1')) {
+      images[i].classList.remove('slide-in1');
+      images[i].classList.add('slide-in');
+    } else if (images[i].classList.contains('slide-in')) {
+      images[i].classList.remove('slide-in');
+      images[i].classList.add('slide-in2');
+    } else if (images[i].classList.contains('slide-in2')) {
+      images[i].classList.remove('slide-in2');
+      images[i].classList.add('expanded');
+    } else if (images[i].classList.contains('expanded')) {
+      images[i].classList.remove('expanded');
+      images[i].classList.add('slide-out');
+    } else if (images[i].classList.contains('slide-out')) {
+      images[i].classList.remove('slide-out');
+      images[i].classList.add('slide-out-move');
+    } else if (images[i].classList.contains('slide-out-move')) {
+      images[i].classList.remove('slide-out-move');
+      images[i].classList.add('slide-in1');
+    }
+  }
+}
+
+// 2초(2000ms)마다 자동 실행
+setInterval(toggleImageClasses, 3000);
