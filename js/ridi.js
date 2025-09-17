@@ -2,35 +2,10 @@
 // 기능  : label5 속성 추가해주기
 // 일일히 자식속성이 누구냐에 따라서 지정해줘야할것이 많음
 //**************************************************************************** 
-for(let i=0; i<12 ; i++){
-    let a=document.querySelectorAll('.s5-li');
-    let b=document.createElement("div");b.classList.add("s5-li-div");
-    let c=document.createElement("div");c.classList.add("s5-li-div2");
-    let d=document.createElement("div");d.classList.add("s5-li-div-div");
-    let a3=document.createElement("a");a3.href="#";a3.classList.add("img11");
- 
-    let div11=document.createElement("div");div11.classList.add("title-free5");
-    let div12=document.createElement("div");div12.classList.add("member-free");
-    let div13=document.createElement("div");div13.classList.add("star-free");
+const items = document.querySelectorAll('.s5-li');
 
-    let p21=document.createElement("p");p21.classList.add("p_member5");
-    let p22=document.createElement("p");p22.classList.add("sbd-member-star");
-        p22.textContent='*';
-    let p23=document.createElement("p");p23.classList.add("p_free");
-        p23.textContent="외 1명";  
-    let p33=document.createElement("p");p33.classList.add("p_star");
-
-    
-    
-    b.appendChild(d);d.appendChild(a3);
-    c.appendChild(div11);
-    c.appendChild(div12);   div12.appendChild(p21); 
-                            div12.appendChild(p22);
-                            div12.appendChild(p23);
-    c.appendChild(div13);   div13.appendChild(p33); 
-    a[i].appendChild(b);
-    a[i].appendChild(c);
-    }
+for(let i = 0; i < 12; i++){
+  items[i].innerHTML += `<div class="s5-li-div"><div class="s5-li-div-div"><a href="#" class="img11"></a></div></div><div class="s5-li-div2"><div class="title-free5"></div><div class="member-free"><p class="p_member5"></p><p class="sbd-member-star">*</p><p class="p_free">외 1명</p></div><div class="star-free"><p class="p_star"></p></div></div>`;}
 
 //**************************************************************************** 
 // 기능  : label5 속성 추가해주기
@@ -95,8 +70,25 @@ button.innerHTML = `
 
 let stars = document.querySelectorAll('.p_star');
 stars.forEach(insert => {
-insert.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" ><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg><span>4.9  </span><span>(3,759)</span>` 
+insert.innerHTML = `<svg width="1em" color='red' height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" ><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg><span style='margin-left :5px ;margin-right:3px'>4.9</span><span>(3,759)</span>` 
 ;});
+
+
+//**************************************************************************** 
+// 기능   : 별모양 있는 평점 숫자 랜덤으로 부여하기
+// 학습목표   :  랜덤함수 반올림 하는 방법 습득하기 
+//**************************************************************************** 
+
+const p_star=document.querySelectorAll('.p_star>span')
+for(i=0;i<p_star.length/2;i++){
+  const random= Math.round((5-Math.random())*10)/10
+  p_star[i*2].textContent=random
+  }
+for(i=0;i<p_star.length/2;i++){
+  // console.log(p_star[i*2-1])
+  const random1= Math.round((Math.random())*10000)
+  p_star[i*2+1].textContent="("+random1+")"
+  }
 
 //**************************************************************************** 
 // 함수명  : checkCollision(고정박스, 이동박스, 왼쪽버튼, 오른쪽 버튼)
@@ -113,6 +105,7 @@ function checkCollision(num) {
 
   btn1.style.visibility = rect1.x > rect2.x ? 'visible' : 'hidden';
   btn2.style.visibility = rect3.x <= rect44 ? 'visible' : 'hidden';}
+
 //**************************************************************************** 
 // 함수명  : 버튼 실행시키기
 // 기능   :  아직 왼쪽 오른쪽 다른 버튼 이라 저렇게 만들었는데 합칠수 있는 방법 생각해보기
@@ -133,6 +126,7 @@ buttons.forEach(({ next, prev, num }) => {
     setTimeout(() => checkCollision(num), 520);
   });
 });
+
 //**************************************************************************** 
 // 함수명  : touchbar(고정박스,이동박스, 실제박스 ,왼쪽버튼, 오른쪽버튼, 이동시킬박스개수, 여백크기, 한화면에 보이는 박스수 )
 // 기능   :  정한 횟수만큼의 박스가 버튼 누를때  이동하는 이벤트
@@ -177,6 +171,7 @@ touchbar('.slider-wrapper6', '.slider-block6', '.slider-container6', 'prevBtn6',
 //**************************************************************************** 
 // 함수명  : fetchBooks(원하는 주제)
 // 기능    : 특정파라미터를 정해주면 url 만들어주기
+//추가기능 공부 : 썸네일이 없는 data 삭제하기
 //**************************************************************************** 
 async function fetchBooks(query) {
     const params = new URLSearchParams({target: "title",query,size: 40});
@@ -225,11 +220,11 @@ async function bookData(a,b,c,d,e) {
 }
 //**************************************************************************** 
 // 실행  : bookData 함수 진행시키기
-// 총 개수   :  2개
+// 총 개수   : 4개
 //**************************************************************************** 
-bookData("상수",'.basic-imgbox3','.title-free3','.p_member3',".basic-index3");
-bookData("기린",'.basic-imgbox4','.title-free4','.p_member4',".basic-index4");
-bookData("기린",'.img11','.title-free5','.p_member5',".basic-index4");
+bookData("사랑",'.basic-imgbox3','.title-free3','.p_member3',".basic-index3");
+bookData("돈",'.basic-imgbox4','.title-free4','.p_member4',".basic-index4");
+bookData("행복",'.img11','.title-free5','.p_member5',".basic-index4");
 bookData("월",'.img12','.title-free6','.p_member6',".basic-index4");
 
 //**************************************************************************** 
@@ -252,54 +247,31 @@ async function daydata(a) {
 
 
 //**************************************************************************** 
-// 기능  : active 설정
+// 함수  :  tabtab(class_name)
 // 요약  : 클릭을 하면 다른 아이들의 active는 다 사라지고 클릭한 친구만 주기
 //**************************************************************************** 
-const days = document.querySelectorAll('.s6-days');
-days.forEach(div => {
-  div.addEventListener('click', () => {
-    days.forEach(d => d.classList.remove('active'));
-    div.classList.add('active');
+function tabtab(class_name){
+  const act = document.querySelectorAll(class_name);
+  act.forEach(div => {
+    div.addEventListener('click', () => {
+      act.forEach(d => d.classList.remove('active'));
+      div.classList.add('active');
+    });
   });
-});
+};
+tabtab('.s6-days')
+tabtab('.s1-menu-ul li')
 
 //**************************************************************************** 
-// 기능  : active 설정
-// 요약  : 클릭을 하면 다른 아이들의 active는 다 사라지고 클릭한 친구만 주기
+// 함수  :  toggleImageClasses()
+// 요약  : 꼼수지만 총 6개의 사진의 클래스가 돌아가면서 반복되는 패턴 만들어주기
 //**************************************************************************** 
 
-container.addEventListener('click', () => {
-  for (i in [0, 1, 2, 3, 4, 5]) {
-    const container = document.getElementById('container');
-    const image = document.getElementsByTagName('img');
-    if (image[i].classList.contains('slide-in1')) {
-      image[i].classList.remove('slide-in1');
-      image[i].classList.add('slide-in');
-    } else if (image[i].classList.contains('slide-in')) {
-      image[i].classList.remove('slide-in')
-      image[i].classList.add('slide-in2');
-    } else if (image[i].classList.contains('slide-in2')) {
-      image[i].classList.remove('slide-in2')
-      image[i].classList.add('expanded');
-    } else if (image[i].classList.contains('expanded')) {
-      image[i].classList.remove('expanded');
-      image[i].classList.add('slide-out');
-    } else if (image[i].classList.contains('slide-out')) {
-      image[i].classList.remove('slide-out')
-      image[i].classList.add('slide-out-move');
-    } else if (image[i].classList.contains('slide-out-move')) {
-      image[i].classList.remove('slide-out-move')
-      image[i].classList.add('slide-in1');
-    }
-  }
-
-});
-
-const containers = document.getElementById('container');
+const container = document.getElementById('container');
+const images = document.getElementsByClassName('img2');
 
 function toggleImageClasses() {
-  const images = document.getElementsByClassName('img2');
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < images.length; i++) {
     if (images[i].classList.contains('slide-in1')) {
       images[i].classList.remove('slide-in1');
       images[i].classList.add('slide-in');
@@ -321,6 +293,27 @@ function toggleImageClasses() {
     }
   }
 }
+container.addEventListener('click', toggleImageClasses); // 클릭 시 호출
+setInterval(toggleImageClasses, 3000); // 3초 간격으로 자동 호출
 
-// 2초(2000ms)마다 자동 실행
-setInterval(toggleImageClasses, 3000);
+//**************************************************************************** 
+// 함수  : img_change(list)
+// 요약  : 장르별 이미지 클릭시 변화되는 메인 베너 꾸미기
+//**************************************************************************** 
+
+const contect_list=[]
+const romens_list=['main2-1','main2-2','main2-6','main2-4','main2-5','main2-6']
+const bl_list=['main3-1','main3-2','main3-3','main3-4','main3-5','main3-6']
+
+
+function img_change(list){
+  const imges = document.getElementsByClassName('img2')
+
+  list.forEach((img,i) => {
+    console.log(imges[i])
+    console.log(list[i])
+    imges[i].src="./img/"+list[i] +".webp"
+    
+  })
+
+}

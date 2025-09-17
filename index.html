@@ -61,8 +61,8 @@
                     <div class="s1-menu-d-f-l-box">
                         <ul class="s1-menu-ul">
                             <li><a class="s1-menu-a" href="#">추천</a></li>
-                            <li><a class="s1-menu-a" href="#">로맨스</a></li>
-                            <li><a class="s1-menu-a" href="#">BL</a></li>
+                            <li onclick="img_change(romens_list)"><a class="s1-menu-a" href="#">로맨스</a></li>
+                            <li onclick="img_change(bl_list)"><a class="s1-menu-a" href="#">BL</a></li>
                             <li><a class="s1-menu-a" href="#">판타지/SF</a></li>
                             <li><a class="s1-menu-a" href="#">액션/무협</a></li>
                             <li><a class="s1-menu-a" href="#">공포/추리</a></li>
@@ -258,6 +258,90 @@
     
             </div>
         </section>
+
+        <section class="lavel6 basic-box">
+            <div class="basic-title1">
+                <div class="basic-title2">
+                    <h2 class="basic-h2">요일별 웹툰</h2>
+                    <div><a href="#">더보기</a></div>
+                </div>
+            </div>
+            <div style="margin-bottom:8px">
+                <div class="days-wrap">
+                    <div class="s6-days active" onclick="daydata('월')">월</div>
+                    <div class="s6-days" onclick="daydata('화')">화</div>
+                    <div class="s6-days" onclick="daydata('수')">수</div>
+                    <div class="s6-days" onclick="daydata('목')">목</div>
+                    <div class="s6-days" onclick="daydata('금')">금</div>
+                    <div class="s6-days" onclick="daydata('토')">토</div>
+                    <div class="s6-days" onclick="daydata('일')">일</div>
+                </div>
+            </div>
+            <div class="basic-body">
+    
+                <div class="basic-body-div">
+                    <div id="scroll_start6" class="scrolldiv"></div>
+                    <div class="basic-body-div-d1 slider-container6">
+                        <ul class="basic-body-ul slider-wrapper6">
+                            <li class="s6-li slider-block6" id="li_start6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6"></li>
+                            <li class="s6-li slider-block6" id="li_end6"></li>
+                        </ul>
+                    </div>
+    
+                    <div class="button-set2">
+                        <button id="prevBtn6" class="button-left"></button>
+                        <button id="nextBtn6"></button>
+                    </div>
+                    <div id="scroll_end6" class="scrolldiv"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lavel5 basic-box">
+            <div class="basic-title1">
+                <div class="basic-title2">
+                    <h2 class="basic-h2">오늘, 리디의 발견</h2>
+                </div>
+            </div>
+            <div class="basic-body">
+    
+                <div class="basic-body-div">
+                    <div id="scroll_start5" class="scrolldiv"></div>
+                    <div class="basic-body-div-d1 slider-container5">
+                        <ul class="basic-body-ul slider-wrapper5">
+                            <l1 class="s5-li slider-block5" id="li_start5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5"></l1>
+                            <l1 class="s5-li slider-block5" id="li_end5"></l1>
+                        </ul>
+                    </div>
+    
+                    <div class="button-set2">
+                        <button id="prevBtn5" class="button-left"></button>
+                        <button id="nextBtn5"></button>
+                    </div>
+                    <div id="scroll_end5" class="scrolldiv"></div>
+                </div>
+            </div>
+        </section>
     
         <section class="event2 basic-box">
             <div class="basic-title1">
@@ -347,7 +431,7 @@
     
         </section>
     
-        <section class="event1">
+        <section class="event1" >
             <div class="event-main basic-title1">
                 <div class="basic-title2">
                     <h2 class="basic-h2">이벤트 보러가기</h2>
@@ -418,90 +502,10 @@
     
         </section>
     
-        <section class="lavel5 basic-box">
-            <div class="basic-title1">
-                <div class="basic-title2">
-                    <h2 class="basic-h2">오늘, 리디의 발견</h2>
-                </div>
-            </div>
-            <div class="basic-body">
-    
-                <div class="basic-body-div">
-                    <div id="scroll_start5" class="scrolldiv"></div>
-                    <div class="basic-body-div-d1 slider-container5">
-                        <ul class="basic-body-ul slider-wrapper5">
-                            <l1 class="s5-li slider-block5" id="li_start5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5"></l1>
-                            <l1 class="s5-li slider-block5" id="li_end5"></l1>
-                        </ul>
-                    </div>
-    
-                    <div class="button-set2">
-                        <button id="prevBtn5" class="button-left"></button>
-                        <button id="nextBtn5"></button>
-                    </div>
-                    <div id="scroll_end5" class="scrolldiv"></div>
-                </div>
-            </div>
-        </section>
+
     
 
-        <section class="lavel6 basic-box">
-            <div class="basic-title1">
-                <div class="basic-title2">
-                    <h2 class="basic-h2">요일별 웹툰</h2>
-                    <div><a href="#">더보기</a></div>
-                </div>
-            </div>
-            <div style="margin-bottom:8px">
-                <div style="display: flex; justify-content: space-between">
-                    <div class="s6-days active" onclick="daydata('월')">월</div>
-                    <div class="s6-days" onclick="daydata('화')">화</div>
-                    <div class="s6-days" onclick="daydata('수')">수</div>
-                    <div class="s6-days" onclick="daydata('목')">목</div>
-                    <div class="s6-days" onclick="daydata('금')">금</div>
-                    <div class="s6-days" onclick="daydata('토')">토</div>
-                    <div class="s6-days" onclick="daydata('일')">일</div>
-                </div>
-            </div>
-            <div class="basic-body">
-    
-                <div class="basic-body-div">
-                    <div id="scroll_start6" class="scrolldiv"></div>
-                    <div class="basic-body-div-d1 slider-container6">
-                        <ul class="basic-body-ul slider-wrapper6">
-                            <li class="s6-li slider-block6" id="li_start6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6"></li>
-                            <li class="s6-li slider-block6" id="li_end6"></li>
-                        </ul>
-                    </div>
-    
-                    <div class="button-set2">
-                        <button id="prevBtn6" class="button-left"></button>
-                        <button id="nextBtn6"></button>
-                    </div>
-                    <div id="scroll_end6" class="scrolldiv"></div>
-                </div>
-            </div>
-        </section>
+
     </main>
 
 
