@@ -317,3 +317,5 @@ function img_change(list){
   })
 
 }
+
+ document.getElementsByClassName('search')[0].addEventListener('click', () => {.classList.add('clicked')})

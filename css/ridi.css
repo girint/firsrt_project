@@ -6,6 +6,8 @@ a{text-decoration: none;color: #333;font-weight: bold; cursor: pointer;backgroun
 div{display: block}
 html {line-height: normal;margin: 0;padding: 0;color: #141414;font-family:Pretendard Variable;font-weight: 400;letter-spacing: -0.03em;font-size: 14px;}
 hr{height: 1px;width: 100%; background-color: #f0f0f0;}
+input{appearance: none;background: none;box-shadow: none;border: 0;border-radius: 0;margin: 0;padding: 0;}
+input:focus {outline: none;}
 
 
 /* 기본박스 설정 */
@@ -30,6 +32,10 @@ hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 #logo1{width: 60px; height: 24px;} #logo2{width: 60px; height: 22px;}
 #h-d1-s{width: 260px;margin-right: 8px;display: flex;align-items: flex-start;}
 #h-d1-s-s{background: #f5f5f5;border: 1px solid rgba(0,0,0,0.005);border-radius: 8px;display: flex;align-items: center;padding: 10px;height: 40px;width: 100%;}
+.search{flex: 1;width: 0;height: 100%;font-size: 15px;line-height: 18px;color: #141414;caret-color: #1e9eff;}
+.search_button{color: #a5a5a5;font-size: 20px;margin-right: 12px;opacity: 1;}
+.hidden_search{width: calc(-166px + 47vw); min-width:391px; max-width: 464px;position: absolute;margin-top: 10px; padding-top: 6px; border: 1px solid #f0f0f0; border-radius: 8px;background-color: #ffffff;overflow: hidden;opacity: 0; z-index: 100;top: 40px;}
+.hidden_search #clicked{opacity: 1;}
 #h-d1-id{display: flex;align-items: center; justify-content:space-around;}
 .h-d1-s-id2, .h-d1-s-id1{color: #787878; font-weight: 600;line-height: 18px;font-size: 14px;padding: 11px 12px;}
 
