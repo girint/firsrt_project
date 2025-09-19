@@ -8,6 +8,7 @@ html {line-height: normal;margin: 0;padding: 0;color: #141414;font-family:Preten
 hr{height: 1px;width: 100%; background-color: #f0f0f0;}
 input{appearance: none;background: none;box-shadow: none;border: 0;border-radius: 0;margin: 0;padding: 0;}
 input:focus {outline: none;}
+button {cursor: pointer;user-select: none;color: inherit;letter-spacing: inherit;font-family: inherit;appearance: none;background: none;box-shadow: none;border: 0;border-radius: 0;margin: 0; padding: 0;}
 
 
 /* 기본박스 설정 */
@@ -34,8 +35,22 @@ input:focus {outline: none;}
 #h-d1-s-s{background: #f5f5f5;border: 1px solid rgba(0,0,0,0.005);border-radius: 8px;display: flex;align-items: center;padding: 10px;height: 40px;width: 100%;}
 .search{flex: 1;width: 0;height: 100%;font-size: 15px;line-height: 18px;color: #141414;caret-color: #1e9eff;}
 .search_button{color: #a5a5a5;font-size: 20px;margin-right: 12px;opacity: 1;}
-.hidden_search{width: calc(-166px + 47vw); min-width:391px; max-width: 464px;position: absolute;margin-top: 10px; padding-top: 6px; border: 1px solid #f0f0f0; border-radius: 8px;background-color: #ffffff;overflow: hidden;opacity: 0; z-index: 100;top: 40px;}
-.hidden_search #clicked{opacity: 1;}
+.hidden_search {width: calc(-166px + 47vw);min-height: 391px;max-height: 464px;position: absolute;margin-top: 10px;padding-top: 6px;border: 1px solid #f0f0f0;border-radius: 8px;background-color: #ffffff;box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08);overflow: hidden;opacity: 0;z-index: 1001000;top: 50px;}
+.hidden_s1{justify-content: space-between;display: flex;padding: 14px 16px 6px;}
+.hidden_s11{display: flex;flex-direction: row;align-items: center;color: rgb(120, 120, 120);}
+
+.hidden_button{font-size: 12px;font-weight: 500;line-height: 16px;outline: none;}
+
+.hidden_s2{  
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    color: rgb(165, 165, 165);}
+
+.clicked{opacity: 1;}
 #h-d1-id{display: flex;align-items: center; justify-content:space-around;}
 .h-d1-s-id2, .h-d1-s-id1{color: #787878; font-weight: 600;line-height: 18px;font-size: 14px;padding: 11px 12px;}
 
@@ -166,7 +181,7 @@ input:focus {outline: none;}
 .button-set{top: 0; left: 0; position: absolute; height: 100%; display:flex; align-items: center; justify-content: space-between;width: calc(100% + 40px); padding: 0; margin:  0 -20px;}
 .button-set2{top: 0; left: 0; position: absolute; height: 72%; display:flex; align-items: center; justify-content: space-between;width: calc(100% + 40px); padding: 0; margin:  0 -20px;}
 .button-left{transform: rotate(180deg); visibility:hidden}
-button {display: inline-flex;justify-content: center;align-items: center;width: 40px;height: 40px;cursor: pointer;background: #ffffff;box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);border-radius: 50%;border: 1px solid #f0f0f0;pointer-events: auto;transition: opacity 0.2s ease, color 0.2s ease, pointer-events 0.2s ease;color: #141414;font-size: 16px; }
+.button-set button,.button-set2 button {display: inline-flex;justify-content: center;align-items: center;width: 40px;height: 40px;cursor: pointer;background: #ffffff;box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);border-radius: 50%;border: 1px solid #f0f0f0;pointer-events: auto;transition: opacity 0.2s ease, color 0.2s ease, pointer-events 0.2s ease;color: #141414;font-size: 16px; }
 .scrolldiv{ box-sizing: border-box;flex: none;width: 1px; margin-right: -1px;}
 
 

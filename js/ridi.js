@@ -62,7 +62,7 @@ insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><d
 // 기능   : 버튼 속성과 별속성 추가해주기
 // 기능   :  위 방법과 동일하게 하여 중복되는 버튼 통일시켜주기
 //**************************************************************************** 
-let buttonss = document.querySelectorAll('button');
+let buttonss = document.querySelectorAll('.button-set button, .button-set2 button');
 buttonss.forEach(button => {
 button.innerHTML = `
 <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
@@ -318,4 +318,19 @@ function img_change(list){
 
 }
 
- document.getElementsByClassName('search')[0].addEventListener('click', () => {.classList.add('clicked')})
+//**************************************************************************** 
+// 함수  : 검색창 클릭시 히든창 나오게 하기
+// 요약  : 장르별 이미지 클릭시 변화되는 메인 베너 꾸미기
+//**************************************************************************** 
+const myInput = document.getElementsByClassName('search')[0];
+const myInput1 = document.getElementsByClassName('hidden_search')[0];
+
+// 포커스 되면 클래스 추가
+myInput.addEventListener('focus', function() {
+  myInput1.classList.add('clicked');
+});
+
+// 포커스가 사라지면 클래스 제거
+myInput.addEventListener('blur', function() {
+  myInput1.classList.remove('clicked');
+});
