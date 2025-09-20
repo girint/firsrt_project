@@ -4,7 +4,7 @@
 <!--![256컬러](메인사진 추가해보자)-->
 <div align="center">
 
- ![title001](https://github.com/NovTeamProject/Team_Project/assets/145963611/c9aa4e57-dd0e-456a-8631-ace01e80288e)/여기에 사진 링크 걸면 됨
+ ![title001](https://github.com/NovTeamProject/Team_Project/assets/145963611/c9aa4e57-dd0e-456a-8631-ace01e80288e)<!--!여기에 사진 추가하면 돼-->
 
 
 
