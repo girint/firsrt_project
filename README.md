@@ -4,15 +4,7 @@
 <!--![256컬러](메인사진 추가해보자)-->
 <div align="center">
 
- ![title001](https://github.com/NovTeamProject/Team_Project/assets/145963611/c9aa4e57-dd0e-456a-8631-ace01e80288e)<!--!여기에 사진 추가하면 돼-->
-
-
-
-
-
-| **![표만드는법]** | **![kakao]** | **![notion2]** |
-| :------: |  :------: | :------: |
-| [주소] |  만료  |  만료 |
+ ![title001]([https://github.com/NovTeamProject/Team_Project/assets/145963611/c9aa4e57-dd0e-456a-8631-ace01e80288e](https://kr.freepik.com/premium-vector/cute-cartoon-giraffe-illustration-with-spots-smiling-face-soft-colors_419442409.htm#fromView=keyword&page=1&position=31&uuid=f1960f88-f414-48f1-ad61-8962b919ae2e&query=%EA%B7%80%EC%97%AC%EC%9A%B4+%EA%B8%B0%EB%A6%B0))<!--!여기에 사진 추가하면 돼-->
 
 
 </div>
@@ -40,7 +32,7 @@
 - API 로 정보 가져오기
 
 
-##💡 기획 의도
+## 💡 기획 의도
 
 
 ## 🙋‍♀️ Team_Member 🙋‍♀️
