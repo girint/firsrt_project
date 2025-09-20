@@ -14,12 +14,9 @@
 01. [📖 프로젝트 소개](#-프로젝트-소개)
 02. [💡 기획 의도](#기획-의도)
 03. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
-04. 
-05. 
-06. 
-07. 
-08. [🔨개발 환경](#-개발-환경-)
-09.  [🤐개선 사항](#-개선-사항-)
+04. [📹 진행과정 📹 ](#-진행과정-)
+05. [🤐개선 사항](#-개선-사항-)
+06. [🔨개발 환경](#-개발-환경-) 
 
 
 
@@ -45,7 +42,7 @@
 </div>
 
 
-## 📹 기능 설명 📹 
+## 📹 진행과정 📹 
 
 <details><summary>HTML</summary>
 <br/>
@@ -60,9 +57,9 @@ https://github.com/NovTeamProject/Team_Project/assets/145524959/506a9e4e-71b8-40
 
 https://github.com/NovTeamProject/Team_Project/assets/145524959/c26d468e-2da1-4310-8325-a83cff4bba20
 
-### [로그인 Code](https://github.com/NovTeamProject/Team_Project/blob/c431c8cf1b65235d922cd6ea7fdba3a699816c18/src/main/java/com/example/team_project/teacher/controller/TeacherJoinController.java#L25C5-L59C2)
+### [로그인 Code]()
 
-### [주소API Code](https://github.com/NovTeamProject/Team_Project/blob/c431c8cf1b65235d922cd6ea7fdba3a699816c18/src/main/webapp/membership/views/joinTeacher.jsp#L119C1-L178C10)
+### [주소API Code]()
 
 </details>
 
