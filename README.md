@@ -31,9 +31,10 @@
 
 ## 💡 기획 의도
 
-
+<br/><br/>
 ## 🙋‍♀️ Team_Member 🙋‍♀️
-<div align="center">
+<br/>
+<div>
 
 | **백기림** | **이상수** | **김태연** | **류주현** |
 | :------: |  :------: | :------: | :------: | 
@@ -41,13 +42,11 @@
 
 </div>
 
-
+<br/><br/>
 ## 📹 진행과정 📹 
 
 <details><summary>HTML</summary>
 <br/>
-
-https://github.com/NovTeamProject/Team_Project/assets/145524959/506a9e4e-71b8-4072-8a95-cd954fea215e
 
 
 </details>
@@ -55,7 +54,6 @@ https://github.com/NovTeamProject/Team_Project/assets/145524959/506a9e4e-71b8-40
 <details><summary>css</summary>
 <br/>
 
-https://github.com/NovTeamProject/Team_Project/assets/145524959/c26d468e-2da1-4310-8325-a83cff4bba20
 
 ### [로그인 Code]()
 
@@ -66,9 +64,6 @@ https://github.com/NovTeamProject/Team_Project/assets/145524959/c26d468e-2da1-43
 <details><summary>JAVA script</summary>
 <br/>
 
-https://github.com/NovTeamProject/Team_Project/assets/145524959/3dc13eac-2342-4cbe-bf40-672a653f5e30
-
-https://github.com/NovTeamProject/Team_Project/assets/145524959/21eaa843-b469-44ba-9011-04a819514617
 
 ### [회원가입 Code](https://github.com/NovTeamProject/Team_Project/blob/c431c8cf1b65235d922cd6ea7fdba3a699816c18/src/main/java/com/example/team_project/teacher/controller/TeacherJoinController.java#L25C5-L59C2)    
 
@@ -86,17 +81,17 @@ https://github.com/NovTeamProject/Team_Project/assets/145524959/21eaa843-b469-44
 4. 좀더 단축 시킬수 있는 방법 모색
 5. 반응형까지 작업하면 더 완벽
 </details>
-
+<br/>
 ## 🔨 개발 환경 🔨 
 <div>
-<!-- <img src="https://img.shields.io/badge/JAVA-C01818?style=flat-square&logo=coffeescript&logoColor=white" />  -->
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=fff"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=fff"/>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=000"/>
-     
-<br>
+
+<!-- <img src="https://img.shields.io/badge/JAVA-C01818?style=flat-square&logo=coffeescript&logoColor=white" />  -->
 <!-- <img src="https://img.shields.io/badge/bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white"/> -->
 <!-- <img src="https://img.shields.io/badge/jquery-0769AD?style=flat&logo=jquery&logoColor=white"/> -->
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=fff"/>
+
 
 <!--<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" /> -->
 <!--<img src="https://img.shields.io/badge/MariaDB-003545?style=flat&logo=MariaDB&logoColor=white" /> -->
