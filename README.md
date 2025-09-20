@@ -1,10 +1,9 @@
 #  💻 리디북스를 통한 프론트엔드 개발 공부하기 💻
 
 
-<!--![256컬러](메인사진 추가해보자)-->
-<div align="center">
 
- ![RIDI_banner]([[https://github.com/NovTeamProject/Team_Project/assets/145963611/c9aa4e57-dd0e-456a-8631-ace01e80288e](https://kr.freepik.com/premium-vector/cute-cartoon-giraffe-illustration-with-spots-smiling-face-soft-colors_419442409.htm#fromView=keyword&page=1&position=31&uuid=f1960f88-f414-48f1-ad61-8962b919ae2e&query=%EA%B7%80%EC%97%AC%EC%9A%B4+%EA%B8%B0%EB%A6%B0](https://github.com/girint/firsrt_project/issues/1#issue-3437282196)))<!--!여기에 사진 추가하면 돼-->
+
+ ![RIDI_banner](https://private-user-images.githubusercontent.com/228488861/491956067-903abbcd-0437-4f8f-9862-65ce8bbb72d4.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTgzODU3MzYsIm5iZiI6MTc1ODM4NTQzNiwicGF0aCI6Ii8yMjg0ODg4NjEvNDkxOTU2MDY3LTkwM2FiYmNkLTA0MzctNGY4Zi05ODYyLTY1Y2U4YmJiNzJkNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkyMFQxNjIzNTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMjE3YmJhOWY0ZjU5MGQxYWU3NWVhYTQwMzBhNWFjNDUzNTk4MzUzMDA5N2ZjZGYzZTJjODJlOGQ5NGYzZjMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.0cLCNY2l59-OIPljznDwb-YLD47S5XJjnitM3fLMOfE)
 
 
 </div>
