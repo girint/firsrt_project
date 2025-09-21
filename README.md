@@ -1,4 +1,4 @@
-#  💻 리디북스를 통한 프론트엔드 개발 공부하기 💻
+#  📖 리디북스를 통한 프론트엔드 개발 공부하기 📖
 
 
 
@@ -8,31 +8,33 @@
 
 </div>
 
-## 📚 목차 📚
+## 🔢 목차 🔢
 
-01. [📖 프로젝트 소개](#-프로젝트-소개)
-02. [💡 기획 의도](#기획-의도)
-03. [🙋‍♀️ Team_Member](#%EF%B8%8F-team_member-%EF%B8%8F)
-04. [📹 진행과정 📹 ](#-진행과정-)
-05. [🤐개선 사항](#-개선-사항-)
-06. [🔨개발 환경](#-개발-환경-) 
+01. [🧾 프로젝트 소개](#-프로젝트-소개)
+02. [💡 기획 의도](#-기획-의도)
+03. [🙋‍♀️ Team_Member](#-team_member)
+04. [📹 진행과정 ](#-진행과정)
+05. [✔️ check point ](#-point)
+06. [🤐개선 사항](#-개선-사항)
+07. [🔨개발 환경](#-개발-환경) 
 
 
 
        
-## 📖 프로젝트 소개📖  
+## 🧾 프로젝트 소개🧾  
 
 - HTML 의 전반적인 배치들 공부하기
 - CSS 를 통해 디자인 요소 가미
 - JAVA script 를 통해 효과 추가
 - API 로 정보 가져오기
 
+<br><br>
 
 ## 💡 기획 의도
 
-<br/><br/>
+<br><br>
+
 ## 🙋‍♀️ Team_Member 🙋‍♀️
-<br/>
 <div>
 
 | **백기림** | **이상수** | **김태연** | **류주현** |
@@ -42,6 +44,7 @@
 </div>
 
 <br/><br/>
+
 ## 📹 진행과정 📹 
 
 <details><summary>HTML</summary>
@@ -54,9 +57,7 @@
 <br/>
 
 
-### [로그인 Code]()
 
-### [주소API Code]()
 
 </details>
 
@@ -64,9 +65,44 @@
 <br/>
 
 
-### [회원가입 Code](https://github.com/NovTeamProject/Team_Project/blob/c431c8cf1b65235d922cd6ea7fdba3a699816c18/src/main/java/com/example/team_project/teacher/controller/TeacherJoinController.java#L25C5-L59C2)    
 
 </details>
+
+<br><br/>
+
+## ✔️ check point ✔️
+<details><summary>head 반응형작업</summary>
+<br/>
+
+
+</details>
+<details><summary>반복되는 부분 자동 생성</summary>
+<br/>
+
+
+</details>
+<details><summary>탭속성 부여</summary>
+<br/>
+
+
+</details>
+<details><summary>슬라이더 원리 분석 및 심화</summary>
+<br/>
+
+
+</details>
+<details><summary>버튼 구현</summary>
+<br/>
+
+
+</details>
+<details><summary>검색창 히든모드 보이기</summary>
+<br/>
+
+
+</details>
+
+
 
 
 ## 🤐 개선 사항 🤐 
@@ -77,7 +113,8 @@
 4. 좀더 단축 시킬수 있는 방법 모색
 5. 반응형까지 작업하면 더 완벽
 
-<br/>
+<br/><br>
+
 ## 🔨 개발 환경 🔨 
 <div>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=fff"/>

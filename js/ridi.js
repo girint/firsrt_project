@@ -272,11 +272,11 @@ const images = document.getElementsByClassName('img2');
 
 function toggleImageClasses() {
   for (let i = 0; i < images.length; i++) {
-    if (images[i].classList.contains('slide-in1')) {
-      images[i].classList.remove('slide-in1');
-      images[i].classList.add('slide-in');
-    } else if (images[i].classList.contains('slide-in')) {
+    if (images[i].classList.contains('slide-in')) {
       images[i].classList.remove('slide-in');
+      images[i].classList.add('slide-in1');
+    } else if (images[i].classList.contains('slide-in1')) {
+      images[i].classList.remove('slide-in1');
       images[i].classList.add('slide-in2');
     } else if (images[i].classList.contains('slide-in2')) {
       images[i].classList.remove('slide-in2');
@@ -289,7 +289,7 @@ function toggleImageClasses() {
       images[i].classList.add('slide-out-move');
     } else if (images[i].classList.contains('slide-out-move')) {
       images[i].classList.remove('slide-out-move');
-      images[i].classList.add('slide-in1');
+      images[i].classList.add('slide-in');
     }
   }
 }
@@ -310,8 +310,6 @@ function img_change(list){
   const imges = document.getElementsByClassName('img2')
 
   list.forEach((img,i) => {
-    console.log(imges[i])
-    console.log(list[i])
     imges[i].src="./img/"+list[i] +".webp"
     
   })
