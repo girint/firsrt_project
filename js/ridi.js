@@ -5,7 +5,9 @@
 const items = document.querySelectorAll('.s5-li');
 
 for(let i = 0; i < 12; i++){
-  items[i].innerHTML += `<div class="s5-li-div"><div class="s5-li-div-div"><a href="#" class="img11"></a></div></div><div class="s5-li-div2"><div class="title-free5"></div><div class="member-free"><p class="p_member5"></p><p class="sbd-member-star">*</p><p class="p_free">외 1명</p></div><div class="star-free"><p class="p_star"></p></div></div>`;}
+  items[i].innerHTML += `<div class="s5-li-div"><div class="s5-li-div-div"><a href="#" class="img11"></a></div></div>
+  <div class="s5-li-div2"><div class="title-free5"></div><div class="member-free"><p class="p_member5"></p><p class="
+  sbd-member-star">*</p><p class="p_free">외 1명</p></div><div class="star-free"><p class="p_star"></p></div></div>`;}
 
 //**************************************************************************** 
 // 기능  : label5 속성 추가해주기
@@ -49,11 +51,17 @@ for(let i=0; i<12 ; i++){
 //**************************************************************************** 
 let label3 = document.querySelectorAll('.label3_li');
 label3.forEach(insert => {
-insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox3"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index3">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d3"><div class="basic-form"><div class="title-free3"></div><div class="member-free"><p class="p_member3"></p><p class="sbd-member-star">*</p><p class="p_free3"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
+insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox3"></div><!-- 인덱스넣는 구간 -->
+<div class="basic-indexbox"><div class="basic-index3">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d3">
+<div class="basic-form"><div class="title-free3"></div><div class="member-free"><p class="p_member3"></p><p class="sbd-member-star">
+*</p><p class="p_free3"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
 
 let label4 = document.querySelectorAll('.label4_li');
 label4.forEach(insert => {
-insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox4"></div><!-- 인덱스넣는 구간 --><div class="basic-indexbox"><div class="basic-index4">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d4"><div class="basic-form"><div class="title-free4"></div><div class="member-free"><p class="p_member4"></p><p class="sbd-member-star">*</p><p class="p_free4"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
+insert.innerHTML = `<div class="basic-bigbox"><!-- 이미지 넣는 구간 --><div class="basic-imgbox4"></div><!-- 인덱스넣는 구간 -->
+<div class="basic-indexbox"><div class="basic-index4">1</div></div><!-- 속성 넣는 구간 --><div class="basic-bigbox-d4">
+<div class="basic-form"><div class="title-free4"></div><div class="member-free"><p class="p_member4"></p><p class="sbd-member-star">
+*</p><p class="p_free4"></p></div><div class="star-free"><p class="p_star"></p></div></div></div></div>` ;});
 
 
 
